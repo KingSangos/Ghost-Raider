@@ -40,5 +40,16 @@ Now to make sure I’m doing this correctly, safely and honestly with you guys, 
 When you download the file, have a good look around and see what you think. Currently, this is the first version of the App and only includes the Homepage, the Settings Page and the HUB pages. Over the next week or two, my plan is to release new versions of the App to be tested again. If you have any questions or comments you’d like to make about the App, please leave me a Direct Message on my Discord Account, or leave a response underneath the post as well.
 
 Thank you for taking the time to read this and I wish you a good day/night/afternoon/light. : D
+ith you guys, I’ve contacted the r/DestinyTheGame team and made sure to get this post approved by them beforehand. The last thing I want to do is interrupt you all (Same reason why I’m releasing this post tonight, to give you PvP Gods that last Lighthouse Visit before the World without Light.)
 
-# Angus McCallum (King Sangos)
+-----------------------------------------------------------------------
+
+# CONTACT ME
+
+- E-Mail: angus.mccallum1@btinternet.com
+- Skype: fear-the-kantus
+- Steam: King Sangos
+- XBL: King Sangos
+- Discord: KingSangos#8545
+
+-----------------------------------------------------------------------
