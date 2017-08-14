@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GHOST RAIDER</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+<!-- JavaScript Page Swipe Code -->
+<!-- Written by Dragan Gaić -->
+<!-- The code written below allows the pages in the Ghost Raider App to change by swiping it from the side.
+     Unfortunately, this JavaScript code could not be linked to the HTML file from an external .js file 
+	 because of the way jQuery Mobile's native AJAX (Asynchronus JavaScript And XML) coding works. The AJAX
+	 code will always override any other pieces of JavaScript code, unless it's supported by the <script>
+	 tags in the HTML code itself. -->
+	 
+<script>
+$(document).on('swipeleft', '.ui-page', function(event){    
+    if(event.handled !== true) // This will prevent event triggering more then once
+    {    
+        var nextpage = $.mobile.activePage.next('[data-role="page"]');
+        // swipe using id of next page if exists
+        if (nextpage.length > 0) {
+            $.mobile.changePage(nextpage, {transition: "slide", reverse: false}, true, true);
+        }
+        event.handled = true;
+    }
+    return false;         
+});
+
+$(document).on('swiperight', '.ui-page', function(event){     
+    if(event.handled !== true) // This will prevent event triggering more then once
+    {      
+        var prevpage = $(this).prev('[data-role="page"]');
+        if (prevpage.length > 0) {
+            $.mobile.changePage(prevpage, {transition: "slide", reverse: true}, true, true);
+        }
+        event.handled = true;
+    }
+    return false;            
+});
+</script>
+
+<!-- End of Page Swipe Script -->
+
+<!-- Ghost Raider: Font CSS Code -->
+<!-- This is the CSS code extract for the font style that will be used for ALL Ghost
+     App Pages. Mainly Helvetica. -->
+	 
+<style>
+body .ui-body-b {
+    font-family: "Helvetica" !important;
+}
+
+h1 {
+  font_size: 5.9vw !important;
+}
+
+</style>
+
+<!-- End of Font CSS Code -->
+
+<!-- Ghost Raider: HOMEPAGE -->
+<!-- This is the central page that the users will first see when they log-on the App. -->
+
+  <div data-role="page" id="homepage">
+  
+  <!-- Menu Panel -->
+  <!-- This is the Menu Panel that's used to take the user to the different pages
+       of the Ghost Raider App, like the Introduction and Encounters pages. -->
+	   
+<div data-role="panel" id="menuPanel" data-display="reveal" data-theme="b">
+
+<!-- Menu Panel Buttons -->
+        <ul data-role="listview">
+            <li data-icon="back"><a href=“#homepage>HOME</a></li>
+            <li data-role="list-divider">RAIDS</li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Vault of Glass</h3>
+              <ul data-role="listview">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Constructing the Spire</a></li>
+                <li><a href="#">The Trial of Kabr</a></li>
+                <li><a href="#">Defend the Confluxes</a></li>
+                <li><a href="#">Destroy the Oracles</a></li>
+                <li><a href="#">The Templar</a></li>
+                <li><a href="#">Gorgon’s Labyrinth</a></li>
+                <li><a href="#">The Gatekeepers</a></li>
+                <li><a href="#">Atheon, Time’s Conflux</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Crota’s End</h3>
+              <ul data-role="listview">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Traversing the Abyss</a></li>
+                <li><a href="#">Bridge of Crota</a></li>
+                <li><a href="#">Thrallway</a></li>
+                <li><a href="#">Ir Yût, the Deathsinger</a></li>
+                <li><a href="#">Crota, Son of Oryx</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>King’s Fall</h3>
+              <ul data-role="listview">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Court of Oryx</a></li>
+                <li><a href="#">Portico</a></li>
+                <li><a href="#">The Warpriest’s Trial</a></li>
+                <li><a href="#">Warpriest</a></li>
+                <li><a href="#">Golgoroth’s Cellar</a></li>
+                <li><a href="#">Golgoroth</a></li>
+                <li><a href="#">Transept</a></li>
+                <li><a href="#">Daughters of Oryx</a></li>
+                <li><a href="#">Oryx, the Taken King</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Wrath of the Machine</h3>
+              <ul data-role="listview">
+			    <li><a href="#">Introduction</a></li>
+                <li><a href="#">Foundry 113</a></li>
+                <li><a href="#">Splicer’s Den (Part 1)</a></li>
+                <li><a href="#">Vosik, the Archpriest</a></li>
+				<li><a href="#">Splicer's Den (Part 2)</a></li>
+				<li><a href="#">The Siege Engine</a></li>
+				<li><a href="#">The Server Farm</a></li>
+				<li><a href="#">The Machine God</a></li>
+				<li><a href="#">Aksis, Archon Prime</a></li>
+				<li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+        </ul>
+
+</div>
+
+  <!-- End of Menu Panel Code -->
+  
+  <!-- Ghost Raider: Homepage & HUB Pages CSS Code -->
+  <!-- This is the CSS code for the Ghost Raider Homepage and HUB pages. This includes the background
+  colours, images and button designs. -->
+	 
+	 <style>
+	 
+ #homepage.ui-page .ui-panel-wrapper {
+    background: url(../www/ghostRaiderFinalHomepage.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+.ui-select {
+    position:relative;
+    margin-top: 140%;
+    }
+
+  img {
+    width: 35vh;
+    height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+  h2 {
+    color: white;
+    font-family: Futura;
+    font-weight: lighter;
+    font-size: 28px;
+    text-align: center;
+    text-shadow: 0 0 2px #FFFFFF;
+
+}
+  p {
+    color: white;
+    font-family: Helvetica;
+    font-weight: 100;
+    font-size: 14px;
+    text-align: center;
+    text-shadow: 0 0 1px #FFFFFF;
+
+}
+
+	 </style>
+
+   <!-- End of Homepage CSS Code -->
+
+    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+	  <a href="#menuPanel" data-icon="home" data-iconpos="notext">Menu</a>
+      <h1>HOME</h1>
+	  <a href="#settingsPage" data-transition="slide" class="ui-btn ui-btn-right ui-nodisc-icon ui-corner-all ui-shadow ui-icon-gear ui-btn-icon-notext"></a>
+    </div>
+    <div data-role="content">
+</br>
+</br>
+</br>
+</br>
+</br>
+
+    </div>
+  </div>
+  
+   <!-- End of Homepage Code -->
+
+<!-- Ghost Raider: Vault of Glass HUB Page -->
+<!-- This is the HUB page for the Vault of Glass section. -->
+
+  <div data-role="page" id="vogHUBpage">
+  
+  <div data-role="panel" id="menuPanel2" data-display="reveal" data-theme="b">
+
+<!-- Menu Panel Buttons -->
+        <ul data-role="listview">
+            <li data-icon="back"><a href=“#homepage>HOME</a></li>
+            <li data-role="list-divider">RAIDS</li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Vault of Glass</h3>
+              <ul data-role="listview">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Constructing the Spire</a></li>
+                <li><a href="#">The Trial of Kabr</a></li>
+                <li><a href="#">Defend the Confluxes</a></li>
+                <li><a href="#">Destroy the Oracles</a></li>
+                <li><a href="#">The Templar</a></li>
+                <li><a href="#">Gorgon’s Labyrinth</a></li>
+                <li><a href="#">The Gatekeepers</a></li>
+                <li><a href="#">Atheon, Time’s Conflux</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Crota’s End</h3>
+              <ul data-role="listview">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Traversing the Abyss</a></li>
+                <li><a href="#">Bridge of Crota</a></li>
+                <li><a href="#">Thrallway</a></li>
+                <li><a href="#">Ir Yût, the Deathsinger</a></li>
+                <li><a href="#">Crota, Son of Oryx</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>King’s Fall</h3>
+              <ul data-role="listview">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Court of Oryx</a></li>
+                <li><a href="#">Portico</a></li>
+                <li><a href="#">The Warpriest’s Trial</a></li>
+                <li><a href="#">Warpriest</a></li>
+                <li><a href="#">Golgoroth’s Cellar</a></li>
+                <li><a href="#">Golgoroth</a></li>
+                <li><a href="#">Transept</a></li>
+                <li><a href="#">Daughters of Oryx</a></li>
+                <li><a href="#">Oryx, the Taken King</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Wrath of the Machine</h3>
+              <ul data-role="listview">
+			    <li><a href="#">Introduction</a></li>
+                <li><a href="#">Foundry 113</a></li>
+                <li><a href="#">Splicer’s Den (Part 1)</a></li>
+                <li><a href="#">Vosik, the Archpriest</a></li>
+				<li><a href="#">Splicer's Den (Part 2)</a></li>
+				<li><a href="#">The Siege Engine</a></li>
+				<li><a href="#">The Server Farm</a></li>
+				<li><a href="#">The Machine God</a></li>
+				<li><a href="#">Aksis, Archon Prime</a></li>
+				<li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+        </ul>
+
+</div>
+
+    <!-- Ghost Raider: Vault of Glass CSS Code -->
+  <!-- This is the CSS code for the Ghost Raider Vault of Glass page. This includes 
+  the background colours, images and button designs. -->
+	 
+	 <style>
+	 
+ #vogHUBpage.ui-page .ui-panel-wrapper {
+    background: url(../www/vogFinalPageBackground.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+#vogButtonDiv {
+        position: fixed;
+        width:200px;
+        height:200px;
+        top: 95%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
+        text-align:center;
+}
+
+
+	 </style>
+
+   <!-- End of Vault of Glass Hub CSS Code -->
+   
+    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+      <a href="#menuPanel2" data-icon="home" data-iconpos="notext">Menu</a>
+      <h1>Vault of Glass</h1>
+	  <a href="#settingsPage" data-transition="slide" class="ui-btn ui-btn-right ui-nodisc-icon ui-corner-all ui-shadow ui-icon-gear ui-btn-icon-notext"></a>
+    </div>
+    <div data-role="content">
+	
+	<div id="vogButtonDiv">
+<a href="#settingsPage" class="ui-btn" style="background: #606C76; border-style: none; font-weight: normal; color: white;" transition="slide">START</a>
+</div>
+
+    </div>
+  </div>
+  
+  <!-- End of Vault of Glass Page Code -->
+
+  
+<!-- Ghost Raider: Crota's End HUB Page -->
+<!-- This is the HUB page for the Crota's End section. -->
+
+  <div data-role="page" id="ceHUBpage">
+  
+  <div data-role="panel" id="menuPanel3" data-display="reveal" data-theme="b">
+
+<!-- Menu Panel Buttons -->
+        <ul data-role="listview">
+            <li data-icon="back"><a href=“#homepage>HOME</a></li>
+            <li data-role="list-divider">RAIDS</li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Vault of Glass</h3>
+              <ul data-role="listview">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Constructing the Spire</a></li>
+                <li><a href="#">The Trial of Kabr</a></li>
+                <li><a href="#">Defend the Confluxes</a></li>
+                <li><a href="#">Destroy the Oracles</a></li>
+                <li><a href="#">The Templar</a></li>
+                <li><a href="#">Gorgon’s Labyrinth</a></li>
+                <li><a href="#">The Gatekeepers</a></li>
+                <li><a href="#">Atheon, Time’s Conflux</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Crota’s End</h3>
+              <ul data-role="listview">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Traversing the Abyss</a></li>
+                <li><a href="#">Bridge of Crota</a></li>
+                <li><a href="#">Thrallway</a></li>
+                <li><a href="#">Ir Yût, the Deathsinger</a></li>
+                <li><a href="#">Crota, Son of Oryx</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>King’s Fall</h3>
+              <ul data-role="listview">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Court of Oryx</a></li>
+                <li><a href="#">Portico</a></li>
+                <li><a href="#">The Warpriest’s Trial</a></li>
+                <li><a href="#">Warpriest</a></li>
+                <li><a href="#">Golgoroth’s Cellar</a></li>
+                <li><a href="#">Golgoroth</a></li>
+                <li><a href="#">Transept</a></li>
+                <li><a href="#">Daughters of Oryx</a></li>
+                <li><a href="#">Oryx, the Taken King</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Wrath of the Machine</h3>
+              <ul data-role="listview">
+			    <li><a href="#">Introduction</a></li>
+                <li><a href="#">Foundry 113</a></li>
+                <li><a href="#">Splicer’s Den (Part 1)</a></li>
+                <li><a href="#">Vosik, the Archpriest</a></li>
+				<li><a href="#">Splicer's Den (Part 2)</a></li>
+				<li><a href="#">The Siege Engine</a></li>
+				<li><a href="#">The Server Farm</a></li>
+				<li><a href="#">The Machine God</a></li>
+				<li><a href="#">Aksis, Archon Prime</a></li>
+				<li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+        </ul>
+
+</div>
+  
+  <!-- Ghost Raider: Crota's End CSS Code -->
+  <!-- This is the CSS code for the Ghost Raider Crota's End page. This includes 
+  the background colours, images and button designs. -->
+	 
+	 <style>
+	 
+ #ceHUBpage.ui-page .ui-panel-wrapper {
+    background: url(../www/ceFinalPageBackground.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+#ceButtonDiv {
+        position: fixed;
+        width:200px;
+        height:200px;
+        top: 95%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
+        text-align:center;
+}
+ </style>
+
+   <!-- End of Crota's End Hub CSS Code -->
+   
+    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+      <a href="#menuPanel3" data-icon="home" data-iconpos="notext">Menu</a>
+      <h1>Crota's End</h1>
+	  <a href="#settingsPage" data-transition="slide" class="ui-btn ui-btn-right ui-nodisc-icon ui-corner-all ui-shadow ui-icon-gear ui-btn-icon-notext"></a>
+    </div>
+    <div data-role="content">
+	
+	<div id="ceButtonDiv">
+<a href="#settingsPage" class="ui-btn" style="background: #2B4728; border-style: none; font-weight: normal; color: white;" transition="slide">START</a>
+</div>
+    </div>
+    </div>
+	
+	  <!-- End of Crota's End Page Code -->
+
+<!-- Ghost Raider: King's Fall HUB Page -->
+<!-- This is the HUB page for the King's Fall section. -->
+
+  <div data-role="page" id="kfHUBpage">
+  
+  <div data-role="panel" id="menuPanel4" data-display="reveal" data-theme="b">
+
+<!-- Menu Panel Buttons -->
+        <ul data-role="listview">
+            <li data-icon="back"><a href=“#homepage>HOME</a></li>
+            <li data-role="list-divider">RAIDS</li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Vault of Glass</h3>
+              <ul data-role="listview">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Constructing the Spire</a></li>
+                <li><a href="#">The Trial of Kabr</a></li>
+                <li><a href="#">Defend the Confluxes</a></li>
+                <li><a href="#">Destroy the Oracles</a></li>
+                <li><a href="#">The Templar</a></li>
+                <li><a href="#">Gorgon’s Labyrinth</a></li>
+                <li><a href="#">The Gatekeepers</a></li>
+                <li><a href="#">Atheon, Time’s Conflux</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Crota’s End</h3>
+              <ul data-role="listview">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Traversing the Abyss</a></li>
+                <li><a href="#">Bridge of Crota</a></li>
+                <li><a href="#">Thrallway</a></li>
+                <li><a href="#">Ir Yût, the Deathsinger</a></li>
+                <li><a href="#">Crota, Son of Oryx</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>King’s Fall</h3>
+              <ul data-role="listview">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Court of Oryx</a></li>
+                <li><a href="#">Portico</a></li>
+                <li><a href="#">The Warpriest’s Trial</a></li>
+                <li><a href="#">Warpriest</a></li>
+                <li><a href="#">Golgoroth’s Cellar</a></li>
+                <li><a href="#">Golgoroth</a></li>
+                <li><a href="#">Transept</a></li>
+                <li><a href="#">Daughters of Oryx</a></li>
+                <li><a href="#">Oryx, the Taken King</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Wrath of the Machine</h3>
+              <ul data-role="listview">
+			    <li><a href="#">Introduction</a></li>
+                <li><a href="#">Foundry 113</a></li>
+                <li><a href="#">Splicer’s Den (Part 1)</a></li>
+                <li><a href="#">Vosik, the Archpriest</a></li>
+				<li><a href="#">Splicer's Den (Part 2)</a></li>
+				<li><a href="#">The Siege Engine</a></li>
+				<li><a href="#">The Server Farm</a></li>
+				<li><a href="#">The Machine God</a></li>
+				<li><a href="#">Aksis, Archon Prime</a></li>
+				<li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+        </ul>
+
+</div>
+  
+    <!-- Ghost Raider: King's Fall CSS Code -->
+  <!-- This is the CSS code for the Ghost Raider King's Fall page. This includes 
+  the background colours, images and button designs. -->
+	 
+	 <style>
+	 
+ #kfHUBpage.ui-page .ui-panel-wrapper {
+    background: url(../www/kfFinalPageBackground.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+#kfButtonDiv {
+        position: fixed;
+        width:200px;
+        height:200px;
+        top: 95%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
+        text-align:center;
+}
+	 </style>
+
+   <!-- End of King's Fall Hub CSS Code -->
+   
+    <div data-role="header" data-theme="b" data-position="fixed">
+      <a href="#menuPanel4" data-icon="home" data-iconpos="notext">Menu</a>
+      <h1>King's Fall</h1>
+	  <a href="#settingsPage" data-transition="slide" class="ui-btn ui-btn-right ui-nodisc-icon ui-corner-all ui-shadow ui-icon-gear ui-btn-icon-notext"></a>
+    </div>
+    <div data-role="content">
+	<div id="kfButtonDiv">
+<a href="#settingsPage" class="ui-btn" style="background: #2C2F37; border-style: none; font-weight: normal; color: white;" transition="slide">START</a>
+</div>
+    </div>
+    </div>
+    </div>
+    </div>
+	
+	<!-- End of King's Fall Page Code -->
+	
+  <!-- Ghost Raider: Wrath of the Machine HUB Page -->
+  <!-- This is the HUB page for the Wrath of the Machine section. -->
+
+  <div data-role="page" id="wotmHUBpage">
+  
+  <div data-role="panel" id="menuPanel5" data-display="reveal" data-theme="b">
+
+<!-- Menu Panel Buttons -->
+        <ul data-role="listview">
+            <li data-icon="back"><a href=“#homepage>HOME</a></li>
+            <li data-role="list-divider">RAIDS</li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Vault of Glass</h3>
+              <ul data-role="listview">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Constructing the Spire</a></li>
+                <li><a href="#">The Trial of Kabr</a></li>
+                <li><a href="#">Defend the Confluxes</a></li>
+                <li><a href="#">Destroy the Oracles</a></li>
+                <li><a href="#">The Templar</a></li>
+                <li><a href="#">Gorgon’s Labyrinth</a></li>
+                <li><a href="#">The Gatekeepers</a></li>
+                <li><a href="#">Atheon, Time’s Conflux</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Crota’s End</h3>
+              <ul data-role="listview">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Traversing the Abyss</a></li>
+                <li><a href="#">Bridge of Crota</a></li>
+                <li><a href="#">Thrallway</a></li>
+                <li><a href="#">Ir Yût, the Deathsinger</a></li>
+                <li><a href="#">Crota, Son of Oryx</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>King’s Fall</h3>
+              <ul data-role="listview">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Court of Oryx</a></li>
+                <li><a href="#">Portico</a></li>
+                <li><a href="#">The Warpriest’s Trial</a></li>
+                <li><a href="#">Warpriest</a></li>
+                <li><a href="#">Golgoroth’s Cellar</a></li>
+                <li><a href="#">Golgoroth</a></li>
+                <li><a href="#">Transept</a></li>
+                <li><a href="#">Daughters of Oryx</a></li>
+                <li><a href="#">Oryx, the Taken King</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Wrath of the Machine</h3>
+              <ul data-role="listview">
+			    <li><a href="#">Introduction</a></li>
+                <li><a href="#">Foundry 113</a></li>
+                <li><a href="#">Splicer’s Den (Part 1)</a></li>
+                <li><a href="#">Vosik, the Archpriest</a></li>
+				<li><a href="#">Splicer's Den (Part 2)</a></li>
+				<li><a href="#">The Siege Engine</a></li>
+				<li><a href="#">The Server Farm</a></li>
+				<li><a href="#">The Machine God</a></li>
+				<li><a href="#">Aksis, Archon Prime</a></li>
+				<li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+        </ul>
+
+</div>
+  
+  <!-- Ghost Raider: Wrath of the Machine CSS Code -->
+  <!-- This is the CSS code for the Ghost Raider Wrath of the Machine page. This includes 
+  the background colours, images and button designs. -->
+	 
+	 <style>
+	 
+    #wotmHUBpage.ui-page .ui-panel-wrapper {
+     background: url(../www/wotmFinalPageBackground.jpg) no-repeat center center fixed; 
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+     background-size: 100% 100%;
+    }
+	
+#wotmButtonDiv {
+        position: fixed;
+        width:200px;
+        height:200px;
+        top: 95%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
+        text-align:center;
+}
+	 </style>
+
+   <!-- End of Wrath of the Machine Hub CSS Code -->
+   
+    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+      <a href="#menuPanel5" data-icon="home" data-iconpos="notext">Menu</a>
+      <h1>Wrath of the Machine</h1>
+	  <a href="#settingsPage" data-transition="slide" class="ui-btn ui-btn-right ui-nodisc-icon ui-corner-all ui-shadow ui-icon-gear ui-btn-icon-notext"></a>
+    </div>
+    <div data-role="content">
+	<div id="wotmButtonDiv">
+<a href="#settingsPage" class="ui-btn" style="background: #CF0000; border-style: none; font-weight: normal; color: white;" transition="slide">START</a>
+</div>
+    </div>
+    </div>
+	
+	<!-- End of Wrath of the Machine Page Code -->
+	
+	<!-- Settings -->
+    <div data-role="page" data-theme="b" id="settingsPage">
+
+    <!-- Error Dialogue -->
+    <div data-role="popup" id="errorMessage" data-overlay-theme="b">
+    <div data-role="header">
+    <style>
+   #settingsPage.ui-page {
+    background: #F8F8FF;
+    }
+
+  #settingsPage.ui-body {
+   font-size: 20px;
+  }
+
+  #settingsPage.ui-page .ui-header {
+   background: #000000;
+  }
+
+</style>
+
+<!-- Error Dialogue Header -->
+<a href="#" data-rel="back" data-role="button" style="background-color: transparent; border-style: none;" class="ui-btn ui-btn-left ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-notext"></a>
+<h1>Oops!</h1>
+</div>
+
+<!-- Error Dialogue Body -->
+<div data-role="main" data-theme="b" class="ui-content">
+<h3>It appears you've found a page that has not been completed yet! Return at once, knave!</h3>
+</br>
+<img src="http://orig06.deviantart.net/9550/f/2017/102/3/1/ghosterroricon_by_king_sangos-db5ixy6.png" alt="GhostErrorIcon" width="226" height="231"></img>
+</br>
+<h4>"Kill everything in the room and the system thinks it's safe. Stupid computer." - Ghost</h4>
+</div>
+</div>
+
+<!-- Settings Header -->
+<div data-role="header">
+<style>
+#settingsPage.ui-input-text{
+background: #FFFFFF !important;
+}
+#settingsPage.ui-page .ui-header {
+background: #000000 !important;
+border-style: none !important;
+}
+</style>
+  <a data-rel="back" style="background-color: transparent; border-style: none;" class="ui-btn ui-btn-left ui-corner-all ui-shadow ui-icon-arrow-l ui-btn-icon-notext"></a>
+  <h1>SETTINGS</h1>
+</div>
+
+<!-- Settings Page -->
+<div data-role="main" class="ui-content">
+<style>
+#settingsPage.ui-page {
+background: #F8F8FF;
+}
+
+#settingsPage.ui-btn {
+background: #FFFFFF;
+}
+
+ h4 {
+ color: black;
+ }
+
+
+#settingsPage.buttonBackground {
+background: #F8F8FF;
+}
+</style>
+
+<!-- Settings Page Content -->
+<h4>HELP</h4>
+<a href="#errorMessage" data-rel="popup" data-transition="pop" data-position-to="window" class="ui-btn ui-icon-heart ui-shadow ui-btn-icon-left">Open Help</a>
+</br>
+<h4>SUPPORT AND FEEDBACK</h4>
+<a href="#errorMessage" data-rel="popup" data-transition="pop" data-position-to="window" class="ui-btn ui-icon-mail ui-shadow ui-btn-icon-left">E-Mail: angusmccallum2@gmail.com</a>
+</div>
+</div>
+
+<!-- Help Page -->
+<div data-role="page" data-theme="b" id="helpPage">
+
+<!-- Help Page Header -->
+<div data-role="header">
+<style>
+#helpPage.ui-input-text{
+background: #FFFFFF !important;
+}
+#helpPage.ui-page .ui-header {
+background: #000000 !important;
+}
+</style>
+
+  <a data-rel="back" style="background-color: transparent; border-style: none;" class="ui-btn ui-btn-left ui-nodisc-icon ui-corner-all ui-shadow ui-icon-arrow-l ui-btn-icon-notext"></a>
+  <h1>HELP</h1>
+</div>
+
+<!-- Help Page Body -->
+<div data-role="main" class="ui-content">
+<style>
+#helpPage.ui-page {
+background: #F8F8FF;
+
+}
+img {
+    max-width: 90%;
+    height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+</style>
+
+<!-- Help Page Body Content -->
+<h2>WELCOME</h2>
+</div>
+
+</div>
+	
+</body>
+</html>
