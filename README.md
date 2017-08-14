@@ -1,8 +1,8 @@
 ----------------------------------------------------------------------
 
-Hey you! This is King Sangos!
+# IMPORTANT
 
-If you're seeing this, you've opened up this .txt file! Perfect! Now, let's get back onto the main, meaty topic.
+If you're reading this, you've made it to the Ghost Raider App page! Perfect! Now, let's get back onto the main, meaty topic.
 
 Go back to the Ghost-Raider Directory page and download the ZIP File, found on the green button on the right-hand side. (Clone or Download)
 
