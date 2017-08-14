@@ -12,6 +12,15 @@ To open up the Ghost Raider App itself, click on the file known as "index.html".
 
 -----------------------------------------------------------------------
 
+Known Issues:
+
+Literally no content.
+Background images have trouble loading.
+Start Buttons take you to Settings Page.
+No Landscape Images.
+
+-----------------------------------------------------------------------
+
 Hi Guardians of r/DestinyTheGame,
 
 The name’s Angus McCallum, but most people prefer to call me by my Guardian’s alias, King Sangos. I’m a post-graduate University Student aiming to get his Master’s Degree ((MsC) Mobile Media Applications), as well as an adoring fan of Destiny. I’m currently in the wraps of completing my final Dissertation Report Unit, which I managed to make Destiny-related, thanks to an older version of my App that I completed months ago.
