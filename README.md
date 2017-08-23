@@ -1,3 +1,7 @@
+# Update 23rd August
+
+The Crota's End, King's Fall and Wrath of the Machine pages will unfortunately not be complete for the dissertation's hand-in, so it will only be the Vault of Glass content that will be included. I will be updating this in time.
+
 ----------------------------------------------------------------------
 
 # IMPORTANT
@@ -14,8 +18,6 @@ To open up the Ghost Raider App itself, click on the file known as "index.html".
 
 # Known Issues:
 
-- Literally no content.
-- Background images have trouble loading.
 - Start Buttons take you to Settings Page.
 - No Landscape Images.
 
