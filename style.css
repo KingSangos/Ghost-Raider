@@ -1,0 +1,164 @@
+body .ui-body-b {
+    font-family: "Helvetica" !important;
+}
+
+h1 {
+  font_size: 5.9vw !important;
+}
+
+#homepage.ui-page .ui-panel-wrapper {
+	height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../www/ghostRaiderFinalHomepage.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+    overflow: hidden;
+}
+
+.ui-select {
+    position:relative;
+    margin-top: 140%;
+    }
+
+  img {
+    width: 35vh;
+    height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+  h2 {
+    color: white;
+    font-family: Futura;
+    font-weight: lighter;
+    font-size: 28px;
+    text-align: center;
+    text-shadow: 0 0 2px #FFFFFF;
+
+}
+  p {
+    color: white;
+    font-family: Helvetica;
+    font-weight: 100;
+    font-size: 14px;
+    text-align: center;
+    text-shadow: 0 0 1px #FFFFFF;
+
+}
+
+#vogHUBpage.ui-page .ui-panel-wrapper {
+	height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../www/vogFinalPageBackground.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+    overflow: hidden;
+}
+
+#vogButtonDiv {
+        position: fixed;
+        width:200px;
+        height:200px;
+        top: 97%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
+        text-align:center;
+}
+
+ #ceHUBpage.ui-page .ui-panel-wrapper {
+	height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../www/ceFinalPageBackground.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+    overflow: hidden;
+}
+
+#ceButtonDiv {
+        position: fixed;
+        width:200px;
+        height:200px;
+        top: 97%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
+        text-align:center;
+}
+
+#kfHUBpage.ui-page .ui-panel-wrapper {
+	height: 100%;
+    margin: 0;
+    padding: 0;
+    -moz-background-size: cover;
+    background: url(../www/kfFinalPageBackground.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+    overflow: hidden;;
+}
+
+#kfButtonDiv {
+        position: fixed;
+        width:200px;
+        height:200px;
+        top: 97%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
+        text-align:center;
+}
+
+ #wotmHUBpage.ui-page .ui-panel-wrapper {
+	height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../www/wotmFinalPageBackground.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+    overflow: hidden;;
+    }
+	
+#wotmButtonDiv {
+        position: fixed;
+        width:200px;
+        height:200px;
+        top: 97%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
+        text-align:center;
+}
+
+
+#helpPage.ui-input-text{
+background: #FFFFFF !important;
+}
+#helpPage.ui-page .ui-header {
+background: #000000 !important;
+}
+
+#helpPage.ui-page {
+background: #F8F8FF;
+
+}
+img {
+    max-width: 90%;
+    height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+}
