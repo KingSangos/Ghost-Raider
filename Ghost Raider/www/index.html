@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GHOST RAIDER</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+<!-- JavaScript Page Swipe Code -->
+<!-- Written by Dragan Gaić -->
+<!-- The code written below allows the pages in the Ghost Raider App to change by swiping it from the side.
+     Unfortunately, this JavaScript code could not be linked to the HTML file from an external .js file 
+	 because of the way jQuery Mobile's native AJAX (Asynchronus JavaScript And XML) coding works. The AJAX
+	 code will always override any other pieces of JavaScript code, unless it's supported by the <script>
+	 tags in the HTML code itself. -->
+	 
+<script>
+$(document).on('swipeleft', '.ui-page', function(event){    
+    if(event.handled !== true) // This will prevent event triggering more then once
+    {    
+        var nextpage = $.mobile.activePage.next('[data-role="page"]');
+        // swipe using id of next page if exists
+        if (nextpage.length > 0) {
+            $.mobile.changePage(nextpage, {transition: "fade", reverse: false}, true, true);
+        }
+        event.handled = true;
+    }
+    return false;         
+});
+
+$(document).on('swiperight', '.ui-page', function(event){     
+    if(event.handled !== true) // This will prevent event triggering more then once
+    {      
+        var prevpage = $(this).prev('[data-role="page"]');
+        if (prevpage.length > 0) {
+            $.mobile.changePage(prevpage, {transition: "fade", reverse: true}, true, true);
+        }
+        event.handled = true;
+    }
+    return false;            
+});
+</script>
+
+<!-- End of Page Swipe Script -->
+
+<!-- Ghost Raider: HOMEPAGE -->
+<!-- This is the central page that the users will first see when they log-on the App. -->
+
+  <div data-role="page" id="homepage">
+  
+  <!-- Menu Panel -->
+  <!-- This is the Menu Panel that's used to take the user to the different pages
+       of the Ghost Raider App, like the Introduction and Encounters pages. -->
+	   
+<div data-role="panel" id="menuPanel" data-display="reveal" data-theme="b">
+
+<!-- Menu Panel Buttons -->
+        <ul data-role="listview">
+            <li data-icon="back"><a href=“#homepage>HOME</a></li>
+            <li data-role="list-divider">RAIDS</li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Vault of Glass</h3>
+              <ul data-role="listview">
+                <li><a href="./vogIntro.html" rel="external">Introduction</a></li>
+                <li><a href="#">Constructing the Spire</a></li>
+                <li><a href="#">The Trial of Kabr</a></li>
+                <li><a href="#">Defend the Confluxes</a></li>
+                <li><a href="#">Destroy the Oracles</a></li>
+                <li><a href="#">The Templar</a></li>
+                <li><a href="#">Gorgon's Labyrinth</a></li>
+                <li><a href="#">The Gatekeepers</a></li>
+                <li><a href="#">Atheon, Time's Conflux</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+        </ul>
+
+</div>
+
+  <!-- End of Menu Panel Code -->
+  
+
+    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+	  <a href="#menuPanel" data-icon="bars">Menu</a>
+      <h1>HOME</h1>
+	  <a href="#settingsPage" data-transition="slide">Settings</a>
+    </div>
+    <div data-role="content">
+  </div>
+  </div>
+  
+   <!-- End of Homepage Code -->
+
+<!-- Ghost Raider: Vault of Glass HUB Page -->
+<!-- This is the HUB page for the Vault of Glass section. -->
+
+  <div data-role="page" id="vogHUBpage">
+  
+  <div data-role="panel" id="menuPanel2" data-display="reveal" data-theme="b">
+
+<!-- Menu Panel Buttons -->
+        <ul data-role="listview">
+            <li data-icon="back"><a href=“#homepage>HOME</a></li>
+            <li data-role="list-divider">RAIDS</li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Vault of Glass</h3>
+              <ul data-role="listview">
+                <li><a href="./vogIntro.html" rel="external">Introduction</a></li>
+                <li><a href="#">Constructing the Spire</a></li>
+                <li><a href="#">The Trial of Kabr</a></li>
+                <li><a href="#">Defend the Confluxes</a></li>
+                <li><a href="#">Destroy the Oracles</a></li>
+                <li><a href="#">The Templar</a></li>
+                <li><a href="#">Gorgon's Labyrinth</a></li>
+                <li><a href="#">The Gatekeepers</a></li>
+                <li><a href="#">Atheon, Time's Conflux</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+        </ul>
+
+</div>
+   
+    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+	  <a href="#menuPanel2" data-icon="bars">Menu</a>
+      <h1>Vault of Glass</h1>
+	  <a href="#settingsPage" data-transition="slide">Settings</a>
+    </div>
+    <div data-role="content" style="height: auto;">
+	
+	<div id="vogButtonDiv">
+<a href="./vogIntro.html" rel="external" class="ui-btn" style="background: #606C76; border-style: none; font-weight: normal; color: white;" transition="slide">START</a>
+</div>
+
+    </div>
+  </div>
+  
+  <!-- End of Vault of Glass Page Code -->
+
+  
+<!-- Ghost Raider: Crota's End HUB Page -->
+<!-- This is the HUB page for the Crota's End section. -->
+
+  <div data-role="page" id="ceHUBpage">
+  
+  <div data-role="panel" id="menuPanel3" data-display="reveal" data-theme="b">
+
+<!-- Menu Panel Buttons -->
+        <ul data-role="listview">
+            <li data-icon="back"><a href=“#homepage>HOME</a></li>
+            <li data-role="list-divider">RAIDS</li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Vault of Glass</h3>
+              <ul data-role="listview">
+                <li><a href="./vogIntro.html" rel="external">Introduction</a></li>
+                <li><a href="#">Constructing the Spire</a></li>
+                <li><a href="#">The Trial of Kabr</a></li>
+                <li><a href="#">Defend the Confluxes</a></li>
+                <li><a href="#">Destroy the Oracles</a></li>
+                <li><a href="#">The Templar</a></li>
+                <li><a href="#">Gorgon's Labyrinth</a></li>
+                <li><a href="#">The Gatekeepers</a></li>
+                <li><a href="#">Atheon, Time's Conflux</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+        </ul>
+
+</div>
+   
+    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+	  <a href="#menuPanel3" data-icon="bars">Menu</a>
+      <h1>Crota's End</h1>
+	  <a href="#settingsPage" data-transition="slide">Settings</a>
+    </div>
+    <div data-role="content" style="height: auto;">
+	
+	<div id="ceButtonDiv">
+<a href="#settingsPage" class="ui-btn" style="background: #2B4728; border-style: none; font-weight: normal; color: white;" transition="slide">START</a>
+</div>
+    </div>
+    </div>
+	
+	  <!-- End of Crota's End Page Code -->
+
+<!-- Ghost Raider: King's Fall HUB Page -->
+<!-- This is the HUB page for the King's Fall section. -->
+
+  <div data-role="page" id="kfHUBpage">
+  
+  <div data-role="panel" id="menuPanel4" data-display="reveal" data-theme="b">
+
+<!-- Menu Panel Buttons -->
+        <ul data-role="listview">
+            <li data-icon="back"><a href=“#homepage>HOME</a></li>
+            <li data-role="list-divider">RAIDS</li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Vault of Glass</h3>
+              <ul data-role="listview">
+                <li><a href="./vogIntro.html" rel="external">Introduction</a></li>
+                <li><a href="#">Constructing the Spire</a></li>
+                <li><a href="#">The Trial of Kabr</a></li>
+                <li><a href="#">Defend the Confluxes</a></li>
+                <li><a href="#">Destroy the Oracles</a></li>
+                <li><a href="#">The Templar</a></li>
+                <li><a href="#">Gorgon's Labyrinth</a></li>
+                <li><a href="#">The Gatekeepers</a></li>
+                <li><a href="#">Atheon, Time's Conflux</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+        </ul>
+
+</div>
+  
+    <div data-role="header" data-theme="b" data-position="fixed">
+	  <a href="#menuPanel4" data-icon="bars">Menu</a>
+      <h1>King's Fall</h1>
+	  <a href="#settingsPage" data-transition="slide">Settings</a>
+    </div>
+    <div data-role="content" style="height: auto;">
+	<div id="kfButtonDiv">
+<a href="#settingsPage" class="ui-btn" style="background: #2C2F37; border-style: none; font-weight: normal; color: white;" transition="slide">START</a>
+</div>
+    </div>
+    </div>
+    </div>
+    </div>
+	
+	<!-- End of King's Fall Page Code -->
+	
+  <!-- Ghost Raider: Wrath of the Machine HUB Page -->
+  <!-- This is the HUB page for the Wrath of the Machine section. -->
+
+  <div data-role="page" id="wotmHUBpage">
+  
+  <div data-role="panel" id="menuPanel5" data-display="reveal" data-theme="b">
+
+<!-- Menu Panel Buttons -->
+        <ul data-role="listview">
+            <li data-icon="back"><a href=“#homepage>HOME</a></li>
+            <li data-role="list-divider">RAIDS</li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Vault of Glass</h3>
+              <ul data-role="listview">
+                <li><a href="./vogIntro.html" rel="external">Introduction</a></li>
+                <li><a href="#">Constructing the Spire</a></li>
+                <li><a href="#">The Trial of Kabr</a></li>
+                <li><a href="#">Defend the Confluxes</a></li>
+                <li><a href="#">Destroy the Oracles</a></li>
+                <li><a href="#">The Templar</a></li>
+                <li><a href="#">Gorgon's Labyrinth</a></li>
+                <li><a href="#">The Gatekeepers</a></li>
+                <li><a href="#">Atheon, Time's Conflux</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+        </ul>
+
+</div>
+  
+    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+	  <a href="#menuPanel5" data-icon="bars">Menu</a>
+      <h1>Wrath of the Machine</h1>
+	  <a href="#settingsPage" data-transition="slide">Settings</a>
+    </div>
+    <div data-role="content" style="height: auto;">
+	<div id="wotmButtonDiv">
+<a href="#settingsPage" class="ui-btn" style="background: #CF0000; border-style: none; font-weight: normal; color: white;" transition="slide">START</a>
+</div>
+    </div>
+    </div>
+	
+	<!-- End of Wrath of the Machine Page Code -->
+	
+	
+	<!-- Settings -->
+    <div data-role="page" data-theme="b" id="settingsPage">
+
+    <!-- Error Dialogue -->
+    <div data-role="popup" id="errorMessage" data-overlay-theme="b">
+    <div data-role="header">
+
+<!-- Error Dialogue Header -->
+<a href="#" data-rel="back" data-role="button" style="background-color: transparent; border-style: none;" class="ui-btn ui-btn-left ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-notext"></a>
+<h1>Oops!</h1>
+</div>
+
+<!-- Error Dialogue Body -->
+<div data-role="main" data-theme="b" class="ui-content">
+<h3>It appears you've found a page that has not been completed yet! Return at once, knave!</h3>
+</br>
+<img src="http://orig06.deviantart.net/9550/f/2017/102/3/1/ghosterroricon_by_king_sangos-db5ixy6.png" alt="GhostErrorIcon" width="226" height="231"></img>
+</br>
+<h4>"Kill everything in the room and the system thinks it's safe. Stupid computer." - Ghost</h4>
+</div>
+</div>
+
+<!-- Settings Header -->
+<div data-role="header">
+  <a data-rel="back" style="background-color: transparent; border-style: none;" class="ui-btn ui-btn-left ui-corner-all ui-shadow ui-icon-arrow-l ui-btn-icon-notext"></a>
+  <h1>SETTINGS</h1>
+</div>
+
+<!-- Settings Page -->
+<div data-role="main" class="ui-content">
+
+<!-- Settings Page Content -->
+<h4>HELP</h4>
+<a href="#errorMessage" data-rel="popup" data-transition="pop" data-position-to="window" class="ui-btn ui-icon-heart ui-shadow ui-btn-icon-left">Open Help</a>
+</br>
+<h4>SUPPORT AND FEEDBACK</h4>
+<a href="#errorMessage" data-rel="popup" data-transition="pop" data-position-to="window" class="ui-btn ui-icon-mail ui-shadow ui-btn-icon-left">E-Mail: angusmccallum2@gmail.com</a>
+</div>
+</div>
+
+<!-- Help Page -->
+<div data-role="page" data-theme="b" id="helpPage">
+
+<!-- Help Page Header -->
+<div data-role="header">
+
+  <a data-rel="back" style="background-color: transparent; border-style: none;" class="ui-btn ui-btn-left ui-nodisc-icon ui-corner-all ui-shadow ui-icon-arrow-l ui-btn-icon-notext"></a>
+  <h1>HELP</h1>
+</div>
+
+<!-- Help Page Body -->
+<div data-role="main" class="ui-content">
+
+<!-- Help Page Body Content -->
+<h2>WELCOME</h2>
+</div>
+
+</div>
+	
+</body>
+</html>

@@ -1,0 +1,103 @@
+body .ui-body-b {
+    font-family: "Helvetica" !important;
+}
+
+h1 {
+  font_size: 5.9vw !important;
+}
+
+#homepage.ui-page .ui-panel-wrapper {
+	height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../www/vaultOfGlassHubBackground.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+    overflow: hidden;
+}
+
+.ui-select {
+    position:relative;
+    margin-top: 140%;
+    }
+
+  img {
+    width: 45vh;
+    height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: solid;
+    border-color: #767987;
+}
+
+  h2 {
+    color: white;
+    font-family: Futura;
+    font-weight: lighter;
+    font-size: 28px;
+    text-align: center;
+    text-shadow: 0 0 2px #FFFFFF;
+
+}
+
+  h3 {
+    color: white;
+    font-family: Futura;
+    font-weight: lighter;
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 0 0 2px #FFFFFF;
+
+}
+  h4 {
+    color: white;
+    font-family: Futura;
+    font-weight: lighter;
+	font-style: italic;
+    font-size: 16px;
+    text-align: center;
+    text-shadow: 0 0 2px #FFFFFF;
+
+}
+  p {
+    color: white;
+    font-family: Helvetica;
+    font-weight: 100;
+    font-size: 14px;
+    text-align: center;
+    text-shadow: 0 0 1px #FFFFFF;
+
+}
+
+#helpPage.ui-input-text{
+background: #FFFFFF !important;
+}
+#helpPage.ui-page .ui-header {
+background: #000000 !important;
+}
+
+#helpPage.ui-page {
+background: #F8F8FF;
+
+}
+img {
+    max-width: 90%;
+    height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+h2 {
+  font_size: 5.9vw !important;
+  font-family: "Helvetica" !important;
+}
+
+h3 {
+  font_size: 4.9vw !important;
+  font-family: "Helvetica" !important;
+}

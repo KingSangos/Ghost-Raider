@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VAULT OF GLASS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="vogStyle.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+<!-- JavaScript Page Swipe Code -->
+<!-- Written by Dragan Gaić -->
+<!-- The code written below allows the pages in the Ghost Raider App to change by swiping it from the side.
+     Unfortunately, this JavaScript code could not be linked to the HTML file from an external .js file 
+	 because of the way jQuery Mobile's native AJAX (Asynchronus JavaScript And XML) coding works. The AJAX
+	 code will always override any other pieces of JavaScript code, unless it's supported by the <script>
+	 tags in the HTML code itself. -->
+	 
+<script>
+$(document).on('swipeleft', '.ui-page', function(event){    
+    if(event.handled !== true) // This will prevent event triggering more then once
+    {    
+        var nextpage = $.mobile.activePage.next('[data-role="page"]');
+        // swipe using id of next page if exists
+        if (nextpage.length > 0) {
+            $.mobile.changePage(nextpage, {transition: "fade", reverse: false}, true, true);
+        }
+        event.handled = true;
+    }
+    return false;         
+});
+
+$(document).on('swiperight', '.ui-page', function(event){     
+    if(event.handled !== true) // This will prevent event triggering more then once
+    {      
+        var prevpage = $(this).prev('[data-role="page"]');
+        if (prevpage.length > 0) {
+            $.mobile.changePage(prevpage, {transition: "fade", reverse: true}, true, true);
+        }
+        event.handled = true;
+    }
+    return false;            
+});
+</script>
+
+<!-- End of Page Swipe Script -->
+
+<!-- Ghost Raider: HOMEPAGE -->
+<!-- This is the central page that the users will first see when they log-on the App. -->
+
+  <div data-role="page" id="homepage">
+  
+  <!-- Menu Panel -->
+  <!-- This is the Menu Panel that's used to take the user to the different pages
+       of the Ghost Raider App, like the Introduction and Encounters pages. -->
+	   
+<div data-role="panel" id="menuPanel" data-display="reveal" data-theme="b">
+
+<!-- Menu Panel Buttons -->
+        <ul data-role="listview">
+            <li data-icon="back"><a href=“#homepage>HOME</a></li>
+            <li data-role="list-divider">RAIDS</li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Vault of Glass</h3>
+              <ul data-role="listview">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Constructing the Spire</a></li>
+                <li><a href="#">The Trial of Kabr</a></li>
+                <li><a href="#">Defend the Confluxes</a></li>
+                <li><a href="#">Destroy the Oracles</a></li>
+                <li><a href="#">The Templar</a></li>
+                <li><a href="#">Gorgon's Labyrinth</a></li>
+                <li><a href="#">The Gatekeepers</a></li>
+                <li><a href="#">Atheon, Time's Conflux</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Crota's End</h3>
+              <ul data-role="listview">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Traversing the Abyss</a></li>
+                <li><a href="#">Bridge of Crota</a></li>
+                <li><a href="#">Thrallway</a></li>
+                <li><a href="#">Ir Yut, the Deathsinger</a></li>
+                <li><a href="#">Crota, Son of Oryx</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>King's Fall</h3>
+              <ul data-role="listview">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Court of Oryx</a></li>
+                <li><a href="#">Portico</a></li>
+                <li><a href="#">The Warpriest's Trial</a></li>
+                <li><a href="#">Warpriest</a></li>
+                <li><a href="#">Golgoroth's Cellar</a></li>
+                <li><a href="#">Golgoroth</a></li>
+                <li><a href="#">Transept</a></li>
+                <li><a href="#">Daughters of Oryx</a></li>
+                <li><a href="#">Oryx, the Taken King</a></li>
+                <li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+            <li data-role="collapsible" data-inset="false" data-iconpos="right">
+              <h3>Wrath of the Machine</h3>
+              <ul data-role="listview">
+			    <li><a href="#">Introduction</a></li>
+                <li><a href="#">Foundry 113</a></li>
+                <li><a href="#">Splicer's Den (Part 1)</a></li>
+                <li><a href="#">Vosik, the Archpriest</a></li>
+				<li><a href="#">Splicer's Den (Part 2)</a></li>
+				<li><a href="#">The Siege Engine</a></li>
+				<li><a href="#">The Server Farm</a></li>
+				<li><a href="#">The Machine God</a></li>
+				<li><a href="#">Aksis, Archon Prime</a></li>
+				<li><a href="#">Conclusion</a></li>
+              </ul>
+            </li>
+        </ul>
+
+</div>
+
+  <!-- End of Menu Panel Code -->
+  
+
+    <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
+	  <a href="#menuPanel" data-icon="bars">Menu</a>
+      <h1>Introduction</h1>
+	  <a href="#settingsPage" data-transition="slide">Settings</a>
+    </div>
+    <div data-role="content">
+	</br>
+	<img src="vogIntro1.jpg" alt="VOG Introduction Image">
+	<h2>Introduction</h2>
+	<img src="vogBox.jpg" alt="VOG Box">
+	<h3>Lore</h3>
+	<h4>Deep within the jungles of Venus lies a sanctuary, filled with mystery, wonder and great evil. A vault of unimaginable power, where the Vex, a race of trans-temporal cybernetic machines rule as masters of time and space. To understand the Vault of Glass, you must understand the Vex and the Pattern.
+</br>
+</br>
+To the Vex, there exists only the Pattern. An absolute truth of perfection that has only one form; one future. Yet there are also anomalous factors in the equation. Glitches in the system that would unravel everything the Vex hold sacred. Because of this, the Vex seek to cut anything away that doesn't fall in line with the Pattern. Despite their incredible numbers and immeasurable levels of intelligence however, the Vex are still bound by the dimensional laws that bind our universe together. This is an arbitrary principle that the Vex aim to absolve.
+</br>
+</br>
+In our reality, the Vex have their limits. But in the Vault of Glass, they rule reality in its absolute form. In the Vault, they are the masters of existence itself. Seeking to understand this place, many have led expeditions inside the Vault of Glass, such as Kabr the Legionless, Pahanin and Praedyth. But any who entered the heart of the Vault eventually became lost to time, even if their strength in the Light was unmatched.
+</br>
+</br>
+Now, the Vanguard has sent you and five other Guardians into the Vault of Glass to stop whatever it is the Vex are planning. While the Vex may only be able to alter reality inside the Vault, who's to say they won’t find a way to replicate their discoveries into our universe?
+</h4>
+</br>
+<img src="vogBox.jpg" alt="VOG Box">
+</br>
+<img src="vogIntro2.jpg" alt="VOG Introduction Image 2">
+<h3>Synopsis</h3>
+<p>Released on September 16th 2014, the Vault of Glass is the first of the four Raids in Destiny to have been released. The Raid can only be unlocked after completing the Main Storyline of the Destiny 1.
+</br>
+</br>
+Here are the level requirements for each version of the Raid:
+</br>
+<h3>NORMAL Mode – Level 26
+HARD Mode – Level 30
+390LL Mode – Level 40 (Light Level 390)
+</h3>
+</br>
+<img src="vogBox.jpg" alt="VOG Box">
+</br>
+<img src="gjallarhorn.jpg" alt="Gjallarhorn">
+<h3 style="text-shadow: 0 0 2px #FFF700;">Exotic of the Raid</h3>
+<p>The most powerful Exotic Weapon to use in the Vault of Glass is arguably the Gjallarhorn. In addition to the intrinsic perk, Wolfpack Rounds, the Gjallarhorn can deal a massive amount of damage to a target, has great crowd control possibilities and tracking rounds, leading to more accurate shots when zoomed in.
+</br>
+</br>
+Many of the Vault of Glass’ unique enemies and The Templar have large health-pools and small critical spots. The Gjallarhorn can deal large burst damage with each rocket and doesn’t require players hitting these spots to achieve this.
+</br>
+</br>
+With the release of Destiny’s fourth expansion, Rise of Iron, the Gjallarhorn is now easily obtainable to all players and you are not required to complete a Raid to get it.
+</p>
+</br>
+<img src="vogBox.jpg" alt="VOG Box">
+</br>
+<img src="aegis.jpg" alt="Aegis">
+<h3>Unique Raid Relic:</h3>
+<h2>The Aegis</h2>
+<p>Found within several encounters of the Vault of Glass is “The Aegis”. It is a Shield-based Weapon that can counteract many mechanics found in the Encounters of the Vault of Glass. Here are the controls to using this weapon:</p>
+<p><strong>Melee Attack (On Land)</strong>: The Player executes a Melee-Bash attack that can be used in combination three more times. (Bash-Bash-Bash).
+</br>
+</br>
+<strong>Melee Attack (In Mid-Air)</strong>: The Player executes an aerial dash-attack, which also allows them to hover for a short bit.
+</br>
+</br>
+<strong>Primary Fire (On Land)</strong>: The Player executes a powerful Shield-Bash that can instantly kill weaker enemies.
+</br>
+</br>
+<strong>Primary Fire (In Mid-Air)</strong>: The Player executes an Area-of-Effect Shockwave that can instantly kill weaker enemies.
+</br>
+</br>
+<strong>Grenade</strong>: The Player creates an AOE barrier around them that protects them and anyone inside the barrier from any damage. Additionally, the barrier also creates a Cleanse effect, removing important de-buffs in some of the Encounters. The Cleanse effect cannot be used while sprinting and/or in mid-air.
+</br>
+</br>
+<strong>Super</strong>: Shoots a powerful Orb of Light that targets ahead of the user in a straight line, tracking any enemies nearby.
+</p>
+</br>
+<img src="vogBox.jpg" alt="VOG Box">
+</br>
+<img src="normalVex.jpg" alt="Normal Vex Enemies">
+<h3>Enemies:</h3>
+<p>Goblins are used as cannon-fodder in the Vault of Glass Raid, serving as an excellent way for players to generate Orbs of Light and Super Energy. Be wary, however, as Goblins can still prove to be formidable force, as their large numbers can easily overwhelm a player if left unchecked.
+</p>
+<p>Hobgoblins are one of the more dangerous enemies you’ll find the Vault of Glass. Their Solar Line Rifle attacks will very often three-shot you if you’re out in the open. Unlike various Patrol and Story Mission locations, Vex Hobgoblins have very specific spawn placements in the Vault of Glass. 
+</p>
+<p>Minotaurs are the bulkiest and most dangerous of the regular enemies you will face in the Vault of Glass. Their large health and powerful Void Bolt attacks make them very dangerous foe in close-proximity.
+</p>
+<p>Harpies, like Goblins, are used a cannon-fodder in some instances of the Raid, yet still can prove to be very dangerous to players in large groups. Additionally, Harpies can move extremely fast and have a rapid solar attack that can easily take down a player’s shields, leaving other enemies to finish the job.</p>
+</p>
+<p>In addition to these default enemy types, the Vault of Glass also contains some unique enemy variations, each possessing their own mechanics and troubles to players.</p>
+<img src="praetorian.jpg" alt="Praetorian">
+<h3>Praetorian</h3>
+<p>Praetorians are a unique, Major-Class variation of the Minotaur enemy found in various parts of the Vault of Glass Raid. Save for their unique coloration and aggressive nature (they often come into close-proximity to players to deal heavy damage), they are no different than a regular Major-Class Minotaur. Their unique mechanic in the Raid, however, is the ability to deactivate Sync Plates when standing inside one.</p>
+</br>
+<img src="supplicant.jpg" alt="Supplicant">
+<h3>Supplicant</h3>
+<p>Supplicants are a unique variation of the Harpy enemies. In addition to possessing a regular Harpy’s attack patterns, Supplicants can detonate themselves in close-proximity. If a player is right next to them and hit by the explosion, they will instantly be killed (unless they have defensive buffs applied and/or are blocking with a Sword).</p>
+</br>
+<img src="fanatic.jpg" alt="Fanatic">
+<h3>Fanatic</h3>
+<p>Fanatics are an extremely dangerous, Major-Class variation of the Goblin enemy. Fanatics behave like Vex Goblins without their heads and often charge towards the player. Much like a Supplicant, if a Fanatic comes into close-proximity of a player, they will explode, dealing a large amount of damage. Additionally, when a Fanatic dies, it will leave a small pool of corrupted, green energy known as a Pool of Negation. If a player touches this pool, they will be affected with the debuff, Marked for Negation.</p>
+</br>
+<img src="yellowOracle.jpg" alt="Yellow Oracle">
+<h3>Oracle (Yellow)</h3>
+<p>Yellow Oracles are stationery enemies found in the Vault of Glass that are only found in two encounters on Normal Mode and one on Hard Mode. Oracles have pre-determined spawns and cannot attack players. However, if left unchecked, Yellow Oracles will apply the debuff, Marked for Negation to the player.</p>
+</br>
+<img src="redOracle.jpg" alt="Red Oracle">
+<h3>Oracle (Red)</h3>
+<p>Red Oracles, much like Yellow Oracles, are stationery enemies found in the Vault of Glass that are found in one encounter on Normal Mode and two on Hard Mode. They behave exactly like Yellow Oracles, except when a Red Oracle activates, it will mark the player with the Prophecy of Doom debuff, draining your Super energy and instantly killing you shortly afterwards.</p>
+</br>
+<img src="gatekeeper.jpg" alt="Gatekeeper">
+<h3>Gatekeeper</h3>
+<p>Gatekeepers are a unique, Major-Class enemy variation of the Vex Hydra. Aside from the name and special appearance, they behave no differently than a regular Major-Class Hydra.</p>
+</br>
+<img src="precursorsAndDescendants.jpg" alt="Precursors & Descendants">
+<h3>Precursors & Descendants</h3>
+<p>Precursors and Descendants are unique, Major-Class enemy variations of the Vex Goblins, Hobgoblins and Minotaurs. Aside from the names and special appearances, they behave no differently than their regular counterparts.</p>
+</br>
+<img src="vogBox.jpg" alt="VOG Box">
+</br>
+<img src="vogIntro3.jpg" alt="Vog Introduction Image 3">
+<h3>Final Notes:</h3>
+<p>The Vault of Glass Raid is filled with powerful enemies that possess large health-pools and strong attacks. Additionally, the locations you will be fighting in often include multiple narrow passageways, where enemy ambushes are very likely to occur. Because of this, the most effective way to complete the Vault of Glass’ encounters is to play defensively and conservatively. Ensure your weapons and armour allow you to deal high-burst damage in close-proximity, and always keep a look out on your surroundings. By keeping tabs on the enemy spawns during an encounter, you won’t be overwhelmed as the fight continues.
+</br>
+</br>
+Close-Range weapons such as Shotguns, Snipers and Swords work wonders on many of enemies in the Vault of Glass, and will save you a lot of hassle during the Raid’s more challenging encounters.
+</p>
+</br>
+
+  </div>
+  </div>
+  
+ 
+	<!-- End of Vault of Glass Introduction Page Code -->
+	
+	<!-- Settings -->
+    <div data-role="page" data-theme="b" id="settingsPage">
+
+    <!-- Error Dialogue -->
+    <div data-role="popup" id="errorMessage" data-overlay-theme="b">
+    <div data-role="header">
+
+<!-- Error Dialogue Header -->
+<a href="#" data-rel="back" data-role="button" style="background-color: transparent; border-style: none;" class="ui-btn ui-btn-left ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-notext"></a>
+<h1>Oops!</h1>
+</div>
+
+<!-- Error Dialogue Body -->
+<div data-role="main" data-theme="b" class="ui-content">
+<h3>It appears you've found a page that has not been completed yet! Return at once, knave!</h3>
+</br>
+<img src="http://orig06.deviantart.net/9550/f/2017/102/3/1/ghosterroricon_by_king_sangos-db5ixy6.png" alt="GhostErrorIcon" width="226" height="231"></img>
+</br>
+<h4>"Kill everything in the room and the system thinks it's safe. Stupid computer." - Ghost</h4>
+</div>
+</div>
+
+<!-- Settings Header -->
+<div data-role="header">
+  <a data-rel="back" style="background-color: transparent; border-style: none;" class="ui-btn ui-btn-left ui-corner-all ui-shadow ui-icon-arrow-l ui-btn-icon-notext"></a>
+  <h1>SETTINGS</h1>
+</div>
+
+<!-- Settings Page -->
+<div data-role="main" class="ui-content">
+
+<!-- Settings Page Content -->
+<h4>HELP</h4>
+<a href="#errorMessage" data-rel="popup" data-transition="pop" data-position-to="window" class="ui-btn ui-icon-heart ui-shadow ui-btn-icon-left">Open Help</a>
+</br>
+<h4>SUPPORT AND FEEDBACK</h4>
+<a href="#errorMessage" data-rel="popup" data-transition="pop" data-position-to="window" class="ui-btn ui-icon-mail ui-shadow ui-btn-icon-left">E-Mail: angusmccallum2@gmail.com</a>
+</div>
+</div>
+
+<!-- Help Page -->
+<div data-role="page" data-theme="b" id="helpPage">
+
+<!-- Help Page Header -->
+<div data-role="header">
+
+  <a data-rel="back" style="background-color: transparent; border-style: none;" class="ui-btn ui-btn-left ui-nodisc-icon ui-corner-all ui-shadow ui-icon-arrow-l ui-btn-icon-notext"></a>
+  <h1>HELP</h1>
+</div>
+
+<!-- Help Page Body -->
+<div data-role="main" class="ui-content">
+
+<!-- Help Page Body Content -->
+<h2>WELCOME</h2>
+</div>
+
+</div>
+	
+</body>
+</html>
