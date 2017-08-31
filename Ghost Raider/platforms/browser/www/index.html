@@ -51,7 +51,7 @@ $(document).on('swiperight', '.ui-page', function(event){
 <!-- Ghost Raider: HOMEPAGE -->
 <!-- This is the central page that the users will first see when they log-on the App. -->
 
-  <div data-role="page" id="homepage">
+<div data-role="page" id="homepage">
   
   <!-- Menu Panel -->
   <!-- This is the Menu Panel that's used to take the user to the different pages
@@ -88,7 +88,7 @@ $(document).on('swiperight', '.ui-page', function(event){
     <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
 	  <a href="#menuPanel" data-icon="bars">Menu</a>
       <h1>HOME</h1>
-	  <a href="#settingsPage" data-transition="slide">Settings</a>
+	  <a href="#settingsPage" data-transition="fade">Settings</a>
     </div>
     <div data-role="content">
   </div>
@@ -159,7 +159,7 @@ $(document).on('swiperight', '.ui-page', function(event){
               <ul data-role="listview">
                 <li><a href="./vogIntro.html" rel="external">Introduction</a></li>
                 <li><a href="#">Constructing the Spire</a></li>
-                <li><a href="#">The Trial of Kabr</a></li>
+                <li><a href="#">Trial of Kabr</a></li>
                 <li><a href="#">Defend the Confluxes</a></li>
                 <li><a href="#">Destroy the Oracles</a></li>
                 <li><a href="#">The Templar</a></li>
@@ -176,13 +176,9 @@ $(document).on('swiperight', '.ui-page', function(event){
     <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
 	  <a href="#menuPanel3" data-icon="bars">Menu</a>
       <h1>Crota's End</h1>
-	  <a href="#settingsPage" data-transition="slide">Settings</a>
+	  <a href="#settingsPage" data-transition="fade">Settings</a>
     </div>
     <div data-role="content" style="height: auto;">
-	
-	<div id="ceButtonDiv">
-<a href="#settingsPage" class="ui-btn" style="background: #2B4728; border-style: none; font-weight: normal; color: white;" transition="slide">START</a>
-</div>
     </div>
     </div>
 	
@@ -221,12 +217,9 @@ $(document).on('swiperight', '.ui-page', function(event){
     <div data-role="header" data-theme="b" data-position="fixed">
 	  <a href="#menuPanel4" data-icon="bars">Menu</a>
       <h1>King's Fall</h1>
-	  <a href="#settingsPage" data-transition="slide">Settings</a>
+	  <a href="#settingsPage" data-transition="fade">Settings</a>
     </div>
     <div data-role="content" style="height: auto;">
-	<div id="kfButtonDiv">
-<a href="#settingsPage" class="ui-btn" style="background: #2C2F37; border-style: none; font-weight: normal; color: white;" transition="slide">START</a>
-</div>
     </div>
     </div>
     </div>
@@ -267,12 +260,9 @@ $(document).on('swiperight', '.ui-page', function(event){
     <div data-role="header" data-theme="b" data-position="fixed" data-id="footer">
 	  <a href="#menuPanel5" data-icon="bars">Menu</a>
       <h1>Wrath of the Machine</h1>
-	  <a href="#settingsPage" data-transition="slide">Settings</a>
+	  <a href="#settingsPage" data-transition="fade">Settings</a>
     </div>
     <div data-role="content" style="height: auto;">
-	<div id="wotmButtonDiv">
-<a href="#settingsPage" class="ui-btn" style="background: #CF0000; border-style: none; font-weight: normal; color: white;" transition="slide">START</a>
-</div>
     </div>
     </div>
 	
@@ -293,17 +283,17 @@ $(document).on('swiperight', '.ui-page', function(event){
 
 <!-- Error Dialogue Body -->
 <div data-role="main" data-theme="b" class="ui-content">
-<h3>It appears you've found a page that has not been completed yet! Return at once, knave!</h3>
+<h3 style="text-align: center;">It appears you've found a page that has not been completed yet! Return at once, knave!</h3>
 </br>
-<img src="http://orig06.deviantart.net/9550/f/2017/102/3/1/ghosterroricon_by_king_sangos-db5ixy6.png" alt="GhostErrorIcon" width="226" height="231"></img>
+<img src="ghostyConfused.png" alt="GhostErrorIcon" style="border-style: none;"></img>
 </br>
-<h4>"Kill everything in the room and the system thinks it's safe. Stupid computer." - Ghost</h4>
+<h4 style="font-style: italic; text-align: center;">"Kill everything in the room and the system thinks it's safe. Stupid computer." - Ghost</h4>
 </div>
 </div>
 
 <!-- Settings Header -->
 <div data-role="header">
-  <a data-rel="back" style="background-color: transparent; border-style: none;" class="ui-btn ui-btn-left ui-corner-all ui-shadow ui-icon-arrow-l ui-btn-icon-notext"></a>
+  <a data-rel="back" class="ui-btn ui-btn-left ui-corner-all ui-shadow ui-icon-arrow-l">Back</a>
   <h1>SETTINGS</h1>
 </div>
 
@@ -312,7 +302,7 @@ $(document).on('swiperight', '.ui-page', function(event){
 
 <!-- Settings Page Content -->
 <h4>HELP</h4>
-<a href="#errorMessage" data-rel="popup" data-transition="pop" data-position-to="window" class="ui-btn ui-icon-heart ui-shadow ui-btn-icon-left">Open Help</a>
+<a href="#help" class="ui-btn ui-icon-heart ui-shadow ui-btn-icon-left">Open Help</a>
 </br>
 <h4>SUPPORT AND FEEDBACK</h4>
 <a href="#errorMessage" data-rel="popup" data-transition="pop" data-position-to="window" class="ui-btn ui-icon-mail ui-shadow ui-btn-icon-left">E-Mail: angusmccallum2@gmail.com</a>
@@ -320,12 +310,11 @@ $(document).on('swiperight', '.ui-page', function(event){
 </div>
 
 <!-- Help Page -->
-<div data-role="page" data-theme="b" id="helpPage">
+<div data-role="page" data-theme="b" id="help">
 
 <!-- Help Page Header -->
 <div data-role="header">
-
-  <a data-rel="back" style="background-color: transparent; border-style: none;" class="ui-btn ui-btn-left ui-nodisc-icon ui-corner-all ui-shadow ui-icon-arrow-l ui-btn-icon-notext"></a>
+  <a data-rel="back" class="ui-btn ui-btn-left ui-nodisc-icon ui-corner-all ui-shadow ui-icon-arrow-l">Back</a>
   <h1>HELP</h1>
 </div>
 
@@ -334,8 +323,32 @@ $(document).on('swiperight', '.ui-page', function(event){
 
 <!-- Help Page Body Content -->
 <h2>WELCOME</h2>
+<p style="font-style: italic; text-align: center;">Hello there!</p>
+<img src="ghostyHappy.png" alt="GhostyHappy"></img>
+<p>If you're reading this, you've reached the Help Page of Ghost Raider. Here, you will find all the information you'll need for this App.</p>
+<br>
+<h2>WHAT IS GHOST RAIDER?</h2>
+<p style="font-style: italic; text-align: center;">I'm glad you asked!</p>
+<img src="ghostyConfused.png" alt="GhostyConfused"></img>
+</br>
+<p>Ghost Raider is a Mobile E-Learning App that teaches to Destiny players, both new and old, how to successfully tackle and complete each of Destiny's four Raids and their Encounters.</p>
+<a href="#vogHUBpage" style="background: #606C76; color: #FFFFFF;" class="ui-btn ui-corner-all ui-shadow">VAULT OF GLASS</a>
+<a href="#ceHUBpage" style="background: #174f17; color: #FFFFFF;" class="ui-btn ui-corner-all ui-shadow">CROTA'S END</a>
+<a href="#kfHUBpage" style="background: #242442; color: #FFFFFF;" class="ui-btn ui-corner-all ui-shadow">KING'S FALL</a>
+<a href="#wotmHUBpage" style="background: #cc0000; color: #FFFFFF;" class="ui-btn ui-corner-all ui-shadow">WRATH OF THE MACHINE</a>
+</br>
+<h2>WHY IS THIS APP USEFUL?</h2>
+<p style="font-style: italic; text-align: center;">Here's where things get good.</p>
+<img src="ghostyAngry.png" alt="GhostyAngry"></img>
+</br>
+<p>Many Raid Guides online provide substantial detail for newcomers to understand Destiny's Raids, yet most fail to mention mechanics that very well will wipe your team if ignored. Furthermore, there is no up-to-date Mobile E-Learning App for Destiny Raids.
+</br>
+</br>Ghost Raider, which is this App, aims to solve these problems for a Mobile Destiny Audience. From easy-to-understand tutorials to simplistic loot charts, Ghost Raider has all you need to jump feet first in the darkest depths.
+</br>
+<h2>GOT ANY QUESTIONS?</h2>
+<p style="font-style: italic; text-align: center;">E-Mail Address: [REDACTED]</p>
+<p>Listed above is my personal E-Mail Address. If you've encountered a nasty bug or a pesky grammatical error, feel free to leave me a message and I'll get back to you as soon as possible.</p>
 </div>
-
 </div>
 	
 </body>

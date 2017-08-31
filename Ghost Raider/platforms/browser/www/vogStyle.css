@@ -18,6 +18,114 @@ h1 {
     overflow: hidden;
 }
 
+#ctsPage.ui-page .ui-panel-wrapper {
+	height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../www/vaultOfGlassHubBackground.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+    overflow: hidden;
+}
+
+#ctsPage2.ui-page .ui-panel-wrapper {
+	height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../www/vaultOfGlassHubBackground.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+    overflow: hidden;
+}
+
+#ctsPage3.ui-page .ui-panel-wrapper {
+	height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../www/vaultOfGlassHubBackground.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+    overflow: hidden;
+}
+
+#ctsPage4.ui-page .ui-panel-wrapper {
+	height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../www/vaultOfGlassHubBackground.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+    overflow: hidden;
+}
+
+#ctsPage5.ui-page .ui-panel-wrapper {
+	height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../www/vaultOfGlassHubBackground.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+    overflow: hidden;
+}
+
+#ctsPage6.ui-page .ui-panel-wrapper {
+	height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../www/vaultOfGlassHubBackground.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+    overflow: hidden;
+}
+
+#ctsPage7.ui-page .ui-panel-wrapper {
+	height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../www/vaultOfGlassHubBackground.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+    overflow: hidden;
+}
+
+#ctsPage8.ui-page .ui-panel-wrapper {
+	height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../www/vaultOfGlassHubBackground.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+    overflow: hidden;
+}
+
+#endPage.ui-page .ui-panel-wrapper {
+	height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../www/vaultOfGlassHubBackground.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+    overflow: hidden;
+}
+
 .ui-select {
     position:relative;
     margin-top: 140%;
@@ -70,34 +178,4 @@ h1 {
     text-align: center;
     text-shadow: 0 0 1px #FFFFFF;
 
-}
-
-#helpPage.ui-input-text{
-background: #FFFFFF !important;
-}
-#helpPage.ui-page .ui-header {
-background: #000000 !important;
-}
-
-#helpPage.ui-page {
-background: #F8F8FF;
-
-}
-img {
-    max-width: 90%;
-    height: auto;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-
-}
-
-h2 {
-  font_size: 5.9vw !important;
-  font-family: "Helvetica" !important;
-}
-
-h3 {
-  font_size: 4.9vw !important;
-  font-family: "Helvetica" !important;
 }
