@@ -1,3 +1,8 @@
+# Update 31st August
+
+This will be the final update for the Ghost Raider App for the CT7MACTE Unit. As mentioned before, this will only include the Vault of Glass content inside.
+
+----------------------------------------------------------------------
 # Update 23rd August
 
 The Crota's End, King's Fall and Wrath of the Machine pages will unfortunately not be complete for the dissertation's hand-in, so it will only be the Vault of Glass content that will be included. I will be updating this in time.
